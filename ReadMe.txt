@@ -1,6 +1,6 @@
 创建版本库
-	git config --global user.name "Your Name"
-	git config --global user.email "email@example.com"
+	git config --global user.name "hugh"
+	git config --global user.email "hugh182@qq.com"
 
 	git init 把这个目录变成Git可以管理的仓库
 	git add "file.txt" "file1.txt" 把文件添加到仓库
@@ -47,7 +47,7 @@
 		如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：ssh-keygen -t rsa -C "你自己的邮件地址"
 
 远程仓库
-	git remote add origin git@github.com:hugh125/learngit.git 创建远程库
+	git remote add origin git@github.com:hugh125/learn_Flask.git 创建远程库
 	git remote rm  origin 删除远程库
 	git push -u original master 
 		第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，

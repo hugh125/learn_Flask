@@ -17,4 +17,16 @@ python manage.py runserver
 	https://github.com/miguelgrinberg/flasky/tree/8d
 	u = User(username='test', email='test.test.com', password='pwd1')
 
+(3)删除数据:
+user = User.query.first()
+db.session.delete(user)
+db.session.commit()
+User.query.all()
+
+(4)修改数据:
+u = User.query.first()
+u.username = 'sb'
+db.session.commit()
+
+
 '''

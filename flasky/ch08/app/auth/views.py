@@ -68,7 +68,7 @@ def confirm(token):
 @auth.before_app_request
 def before_request():
     print(__file__, request.endpoint)
-    if current_user.is_authenticated() \
+    if current_user.is_authenticated \
         and not current_user.confirmed \
         and request.endpoint[:5] != 'auth' \
         and request.endpoint != 'static':
@@ -76,6 +76,6 @@ def before_request():
 
 @auth.route('/unconfirmed')
 def unconfirmed():
-    if current_user.is_anonymous() or current_user.confirmed:
+    if current_user.is_anonymous or current_user.confirmed:
         return redirect(url_for('main.index'))
     return render_template('auth/unconfirmed.html')

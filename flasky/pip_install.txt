@@ -1,0 +1,17 @@
+ch3.6
+    pip install flask-moment
+
+ch4
+    pip install flask-wtf
+
+ch5.5
+    pip install flask-sqlalchemy
+    pip install flask-SQLAlchemy
+
+ch5.11
+    pip install flask-migrate
+
+ch6.0
+    pip install flask-mail
+    pip install --no-deps lamson chardet flask-mail
+	不能随意移动p3vir目录

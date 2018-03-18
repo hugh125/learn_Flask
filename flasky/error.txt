@@ -15,3 +15,9 @@ ch4.3
 ch5.5
     添加
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
+ch7.3
+    导入flask出错，显示不存在emali.Util
+    修改app/email.py --> app/myemail.py
+	
+	flask_mail 导入出错

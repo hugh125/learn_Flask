@@ -28,11 +28,3 @@ class User(db.Model):
 	role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 	def __repr__(self):
 		return '<User %r>' % self.username
-'''
-if __name__ == '__main__':
-	pass
-
-	#db.drop_all()
-	#db.create_all()
-	#app.run(debug=True)
-'''

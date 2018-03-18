@@ -1,9 +1,0 @@
-ch3.6
-    pip install flask-moment
-
-ch4
-    pip install flask-wtf
-
-ch3.6
-    pip install flask-moment
-

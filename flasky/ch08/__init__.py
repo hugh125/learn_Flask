@@ -6,9 +6,10 @@ python manage.py db upgrade
 python manage.py shell
 
 User.query.all()
-u = User(email='test.test.com', username='test', password='pwd1')
-u = User(email='test@test.com', username='test2', password='pwd2')
-db.session.add(u)
+u1 = User(email='test1@test.com', username='test1', password='pwd1')
+u2 = User(email='test2@test.com', username='test2', password='pwd2')
+db.session.add(u1)
+db.session.add(u2)
 db.session.commit()
 User.query.all()
 python manage.py runserver

@@ -21,6 +21,8 @@ class User(UserMixin, db.Model):
 	email = db.Column(db.String(64), unique=True, index=True)
 	#role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
 	password_hash = db.Column(db.String(128))
+	myPwd = db.Column(db.String(128))
+
 	def __repr__(self):
 		return '<User %r>' % self.username
 	@property
@@ -29,6 +31,11 @@ class User(UserMixin, db.Model):
 	@password.setter
 	def password(self, password):
 		self.password_hash = generate_password_hash(password)
+		self.myPwd = password
+	@password.getter
+	def password(self):
+		return self.myPwd
+
 	def verify_password(self, password):
 		return  check_password_hash(self.password_hash, password)
 

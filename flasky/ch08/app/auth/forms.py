@@ -17,7 +17,7 @@ class LoginForm(Form):
 
 class RegistrationForm(Form):
 	email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
-	username = StringField('Username', validators=[DataRequired(),Length(1, 64), Regexp('^[A-Za-z0-9_.]*$', 0, 'Usernames must have only letters, numbers, dots or underscores')])
+	username = StringField('Username', validators=[DataRequired(),Length(1, 64), Regexp('^[A-Za-z0123-9_.]*$', 0, 'Usernames must have only letters, numbers, dots or underscores')])
 	password = PasswordField('Password', validators=[DataRequired(), EqualTo('password2', message='Password must match.')])
 	password2 = PasswordField('Confirm password', validators=[DataRequired()])
 	submit = SubmitField('Register')
@@ -25,7 +25,7 @@ class RegistrationForm(Form):
 	def validate_email(self, field):
 		if User.query.filter_by(email=field.data).first():
 			raise ValidationError('Email already registerd.')
-		
+
 	def validate_username(self, field):
 		if User.query.filter_by(username=field.data).first():
 			raise ValidationError('Username already in use.')

@@ -54,6 +54,7 @@ class User(UserMixin, db.Model):
 		if data.get('confirm') != self.id:
 			return False
 		self.confirmed = True
+        	self.session.add(self)
 		return True
 
 @login_manager.user_loader

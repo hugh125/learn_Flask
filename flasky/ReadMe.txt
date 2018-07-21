@@ -116,6 +116,7 @@ git checkout -m
 配置文件：
 	.git/config	每个仓库的Git配置文件
 	.gitconfig	当前用户的Git配置文件
+	https://www.cnblogs.com/kevingrace/p/5690241.html
 	
 自动上传脚本 git_push.sh
 	# bash git_push.sh
